@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://gtri.gatech.edu"?>
+<params>
+  <library>Defenders_plugin</library>
+  <initial_speed>24.3</initial_speed>
+  <initial_speed>24.3</initial_speed>
+  <max_speed>30</max_speed>
+  <sense_range>200</sense_range>
+  <attack_sense_range>30</attack_sense_range>
+  <fov_width_angle>90</fov_width_angle>
+  <fov_height_angle>90</fov_height_angle>
+
+  <goal_weight>1</goal_weight>
+  <avoid_team_weight>0.5</avoid_team_weight>
+  <avoid_nonteam_weight>0</avoid_nonteam_weight>
+  <centroid_weight>0</centroid_weight>
+  <align_weight>0</align_weight>
+
+  <goal>0 0 100</goal>
+  <sphere_of_influence>100</sphere_of_influence>
+  <minimum_team_range>4</minimum_team_range>
+  <minimum_nonteam_range>20</minimum_nonteam_range>
+</params>

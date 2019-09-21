@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.boids";
+
+import "scrimmage/proto/Vector3d.proto";
+
+package boids;
+
+message Example1 {
+        scrimmage_proto.Vector3d vec = 1;
+        double value = 2;
+}
