@@ -25,7 +25,7 @@ Drones from two teams have some similarities and differences in their setup.
 	* Same maximal speed
 	* Same observable area. Any drone can detect enemies that are inside the grey pyramid (The pyramid is hidden in the demo but shown here for visualization) and communicate to team members within a specified radius.
 * Differences
-	* Ability to attack: Only defenders have an attack area (red pyramid).  Therefore, only they have the ability to attack.  Any attackers fly within the red pyramid are attackable and they must remain inside the red pyramid for a certain duration (3 timesteps in the demo) to be eliminated.  Only one drone can be eliminated at a time.
+	* Ability to attack: Only defenders can attack.  Any attackers flying within the red pyramid are attackable and if they remain inside the red pyramid for a certain duration (3 timesteps in the demo), they are eliminated.  A defender can eliminate only one attacker at a time.
 	* Strategies: The strategies are implemented at individual level and inspired by boids. The velocity vector of each drone at the next time step is found as follows:
 		* Find repulsion vectors between: the drone and all of its local neighbors (team or non-team)
 		* Find attraction vectors between: the drone and its goal, the drone and average position of the drone’s local team members
