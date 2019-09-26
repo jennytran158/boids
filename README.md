@@ -1,7 +1,7 @@
 # boids
 ## Introduction
 A simulation in Scrimmage of a battle between two swarms of drones, each with different objectives and setup.
-Video Demo
+## Video Demo
 https://drive.google.com/file/d/1brlq7wcs96SHzqVmrgR0csfq8oxOLbYy/view?usp=sharing
 
 ### Note
@@ -11,11 +11,11 @@ Each red line indicates a pair of defender (red) and its target (blue)
 The green hyper rectangular at the origin is the defenders’ base.  Its color will turn from green to red once it has been attacked
 
 ### Objectives
-	Red Team (defenders): Protect the team’s base against blue team.
-	Blue Team (attackers): Attack defenders’ base.
-	To win the game
-		Red Team (defenders): Eliminate all attackers before any reaches the base
-		Blue Team (attackers): At least one attacker crosses the boundaries of the base
+Red Team (defenders): Protect the team’s base against blue team.
+Blue Team (attackers): Attack defenders’ base.
+To win the game
+	Red Team (defenders): Eliminate all attackers before any reaches the base
+	Blue Team (attackers): At least one attacker crosses the boundaries of the base
 ### Team Setup
 	Drones from two teams have some similarities and differences in their setup.
 #### Similarities
