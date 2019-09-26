@@ -1,4 +1,4 @@
-# boids
+# Boids
 ## Introduction
 A simulation in Scrimmage of a battle between two swarms of drones, each with different objectives and setup.
 ## Video Demo
@@ -14,8 +14,8 @@ https://youtu.be/g0th54Eyt7c
 * Red Team (defenders): Protect the team’s base against blue team.
 * Blue Team (attackers): Attack defenders’ base.
 * To win the game
-	Red Team (defenders): Eliminate all attackers before any reaches the base
-	Blue Team (attackers): At least one attacker crosses the boundaries of the base
+	* Red Team (defenders): Eliminate all attackers before any reaches the base
+	* Blue Team (attackers): At least one attacker crosses the boundaries of the base
 ### Team Setup
 Drones from two teams have some similarities and differences in their setup.
 
@@ -31,12 +31,9 @@ Drones from two teams have some similarities and differences in their setup.
 		* Find attraction vectors between: the drone and its goal, the drone and average position of the drone’s local team members
 		* Find the average heading of local team members
 		* Finally, find the desired velocity vector which is the weighted sum of the vectors found above
-		* __Red Team (defenders)__: Each defender’s goal position is dynamically changed during the battle and is either an attacker or the base.  If the defender detects any enemies, its goal position is set to the closest enemy.  If no enemies are detected, the goal position is set to the base.  The weights for defenders are below.  Because the weights for avoiding attackers, centroid and align are 0s, the defenders’ general strategy is to attack closest enemies or to go back to the base while avoiding collision with team members.
-		
-	![picture alt](https://github.com/jennytran158/boids/blob/master/images/defenders_weights.png)
+		* __Red Team (defenders)__: Each defender’s goal position is dynamically changed during the battle and is either an attacker or the base.  If the defender detects any enemies, its goal position is set to the closest enemy.  If no enemies are detected, the goal position is set to the base.  The weights for defenders are below.  Because the weights for avoiding attackers, centroid and align are 0s, the defenders’ general strategy is to attack closest enemies or to go back to the base while avoiding collision with team members.![picture alt](https://github.com/jennytran158/boids/blob/master/images/defenders_weights.png)
 		* __Blue Team (attackers)__: Attackers’ goal position stays the same for the whole simulation and is the defenders’ base.  The attackers’ strategy is to move together (because align and centroid weights > 0) toward the base while avoiding collisions with the defenders (avoid non-team weight > 0) and other team members (avoid team weight > 0).
-		
-	![picture alt](https://github.com/jennytran158/boids/blob/master/images/attackers_weights.png)
+		![picture alt](https://github.com/jennytran158/boids/blob/master/images/attackers_weights.png)
 
 ## Implementation:
 Scrimmage: https://www.scrimmagesim.org/sphinx/html/index.html
