@@ -44,7 +44,7 @@ __Plugins used in this project:__
 #### Files for boids autonomy:
 * src/plugins/autonomy
 	* the source file (.cpp) contains the implementation and logics of boids
-* include/my-scrimmage-plugins/plugins/autonomy
+* include/boids/plugins/autonomy
 	* a header (.h)
 	* a parameter (.xml) Boids’ settings - weights
 
