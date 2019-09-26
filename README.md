@@ -17,10 +17,13 @@ https://youtu.be/g0th54Eyt7c
 	Red Team (defenders): Eliminate all attackers before any reaches the base
 	Blue Team (attackers): At least one attacker crosses the boundaries of the base
 ### Team Setup
-	Drones from two teams have some similarities and differences in their setup.
+Drones from two teams have some similarities and differences in their setup.
+
+<img src="https://github.com/jennytran158/boids/blob/master/images/FOV.png" alt="FOV" width="250"/>
+
 * Similarities
 	* Same maximal speed
-	* Same observable area. Any drone can detect enemies that are inside the grey pyramid (The pyramid is hidden in the demo but shown here for visualization) and communicate to team members within a specified radius
+	* Same observable area. Any drone can detect enemies that are inside the grey pyramid (The pyramid is hidden in the demo but shown here for visualization) and communicate to team members within a specified radius.
 * Differences
 	* Ability to attack: Only defenders have an attack area (red pyramid).  Therefore, only they have the ability to attack.  Any attackers fly within the red pyramid are attackable and they must remain inside the red pyramid for a certain duration (3 timesteps in the demo) to be eliminated.  Only one drone can be eliminated at a time.
 	* Strategies: The strategies are implemented at individual level and inspired by boids. The velocity vector of each drone at the next time step is found as follows:
@@ -28,13 +31,17 @@ https://youtu.be/g0th54Eyt7c
 		* Find attraction vectors between: the drone and its goal, the drone and average position of the drone’s local team members
 		* Find the average heading of local team members
 		* Finally, find the desired velocity vector which is the weighted sum of the vectors found above
-		* Red Team (defenders): Each defender’s goal position is dynamically changed during the battle and is either an attacker or the base.  If the defender detects any enemies, its goal position is set to the closest enemy.  If no enemies are detected, the goal position is set to the base.  The weights for defenders are below.  Because the weights for avoiding attackers, centroid and align are 0s, the defenders’ general strategy is to attack closest enemies or to go back to the base while avoiding collision with team members.
-		* Blue Team (attackers): Attackers’ goal position stays the same for the whole simulation and is the defenders’ base.  The attackers’ strategy is to move together (because align and centroid weights > 0) toward the base while avoiding collisions with the defenders (avoid non-team weight > 0) and other team members (avoid team weight > 0).
+		* __Red Team (defenders)__: Each defender’s goal position is dynamically changed during the battle and is either an attacker or the base.  If the defender detects any enemies, its goal position is set to the closest enemy.  If no enemies are detected, the goal position is set to the base.  The weights for defenders are below.  Because the weights for avoiding attackers, centroid and align are 0s, the defenders’ general strategy is to attack closest enemies or to go back to the base while avoiding collision with team members.
+		
+	![picture alt](https://github.com/jennytran158/boids/blob/master/images/defenders_weights.png)
+		* __Blue Team (attackers)__: Attackers’ goal position stays the same for the whole simulation and is the defenders’ base.  The attackers’ strategy is to move together (because align and centroid weights > 0) toward the base while avoiding collisions with the defenders (avoid non-team weight > 0) and other team members (avoid team weight > 0).
+		
+	![picture alt](https://github.com/jennytran158/boids/blob/master/images/attackers_weights.png)
 
 ## Implementation:
-Scrimmage:
-https://www.scrimmagesim.org/sphinx/html/index.html
-Plugins used in this project:
+Scrimmage: https://www.scrimmagesim.org/sphinx/html/index.html
+
+__Plugins used in this project:__
 ![picture alt](https://github.com/jennytran158/boids/blob/master/images/boids.png "Plugins used in the project")
 
 #### Files for boids autonomy:
