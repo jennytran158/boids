@@ -36,6 +36,7 @@
 
 #include <string>
 #include <map>
+#include <vector>
 
 namespace scrimmage {
 namespace autonomy {

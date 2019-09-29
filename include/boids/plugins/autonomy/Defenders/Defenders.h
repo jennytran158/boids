@@ -33,6 +33,7 @@
 #ifndef INCLUDE_BOIDS_PLUGINS_AUTONOMY_DEFENDERS_DEFENDERS_H_
 #define INCLUDE_BOIDS_PLUGINS_AUTONOMY_DEFENDERS_DEFENDERS_H_
 #include <scrimmage/autonomy/Autonomy.h>
+#include <vector>
 
 #include <string>
 #include <map>
