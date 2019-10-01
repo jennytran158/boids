@@ -29,3 +29,5 @@ debug
 *egg-info*
 grpc.patch
 py_bindings
+.DS_store
+*—
