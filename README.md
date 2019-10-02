@@ -36,8 +36,9 @@ Drones from two teams have some similarities and differences in their setup.
 		![picture alt](https://github.com/jennytran158/boids/blob/master/images/attackers_weights.png)
 
 ## Implementation:
-Scrimmage: https://www.scrimmagesim.org/sphinx/html/index.html
+Original source code: Scrimmage's [Boids](https://github.com/gtri/scrimmage/blob/master/src/plugins/autonomy/Boids/Boids.cpp) autonomy 
 
+Scrimmage: https://www.scrimmagesim.org/sphinx/html/index.html
 __Plugins used in this project:__
 ![picture alt](https://github.com/jennytran158/boids/blob/master/images/boids.png "Plugins used in the project")
 
