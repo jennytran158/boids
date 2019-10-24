@@ -12,7 +12,7 @@
     <stream_port>50051</stream_port>
     <stream_ip>localhost</stream_ip>
 
-    <end_condition>time, all_dead</end_condition> <!-- time, one_team, none-->
+    <end_condition>time, all_dead, one_team</end_condition> <!-- time, one_team, none-->
 
     <grid_spacing>10</grid_spacing>
     <grid_size>1000</grid_size>
@@ -24,7 +24,7 @@
     <output_type>all</output_type>
     <show_plugins>false</show_plugins>
 
-    <metrics order="0">SimpleCollisionMetrics</metrics>
+    <metrics order="0">SOSMetrics</metrics>
 
     <log_dir>~/.scrimmage/logs</log_dir>
 
@@ -47,7 +47,7 @@
     <entity>
       <team_id>1</team_id>
       <color>77 77 255</color>
-      <count>35</count>
+      <count>5</count>
       <health>1</health>
       <radius>2</radius>
       <variance_x>20</variance_x>
@@ -193,7 +193,7 @@
     <entity>
       <team_id>2</team_id>
       <color>255 0 0</color>
-      <count>50</count>
+      <count>5</count>
       <health>1</health>
       <radius>2</radius>
       <x>0</x>
