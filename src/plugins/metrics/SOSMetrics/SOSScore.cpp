@@ -30,39 +30,30 @@
  *
  */
 
-#ifndef INCLUDE_SCRIMMAGE_PLUGINS_METRICS_SOSMetrics_SOSMetrics_H_
-#define INCLUDE_SCRIMMAGE_PLUGINS_METRICS_SOSMetrics_SOSMetrics_H_
-#include <scrimmage/metrics/Metrics.h>
+#include <scrimmage/parse/ConfigParse.h>
+#include <scrimmage/parse/ParseUtils.h>
+#include <boids/plugins/metrics/SOSMetrics/SOSScore.h>
 
-#include "SOSScore.h"
+namespace sc = scrimmage;
 
-#include <map>
-#include <set>
-#include <string>
+namespace scrimmage {
+namespace metrics {
 
-namespace scrimmage
-{
-namespace metrics
-{
-class SOSMetrics : public scrimmage::Metrics
-{
-public:
-    SOSMetrics();
+bool SOSScore::set_weights(std::map<std::string, std::string> &params) {
+    flight_time_w_ = sc::get<double>("flight_time_w", params, 0.0);
+    team_collisions_w_ = sc::get<double>("team_collisions_w", params, 0.0);
+    non_team_collisions_w_ = sc::get<double>("non_team_collisions_w", params, 0.0);
+    killed_w_ = sc::get<double>("killed_w", params, 0.0);
 
-    void init(std::map<std::string, std::string> &params) override;
-    bool step_metrics(double t, double dt) override;
-    void calc_team_scores() override;
-    void print_team_summaries() override;
+    return true;
+}
 
-protected:
-    std::map<int, SOSScore> scores_;
-    std::map<int, SOSScore> team_coll_scores_;
-    std::map<int, bool> surviving_teams_;
-
-    std::map<std::string, std::string> params_;
-    bool initialized_ = false;
-    std::set<int> teams_;
-};
+double SOSScore::score() {
+    double s = flight_time_norm() * flight_time_w_
+        + non_team_collisions() * non_team_collisions_w_
+        + team_collisions() * team_collisions_w_
+        + killed() * killed_w_;
+    return s;
+}
 } // namespace metrics
 } // namespace scrimmage
-#endif // INCLUDE_SCRIMMAGE_PLUGINS_METRICS_SOSMetrics_SOSMetrics_H_

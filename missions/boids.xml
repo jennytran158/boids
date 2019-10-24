@@ -193,7 +193,7 @@
     <entity>
       <team_id>2</team_id>
       <color>255 0 0</color>
-      <count>5</count>
+      <count>20</count>
       <health>1</health>
       <radius>2</radius>
       <x>0</x>

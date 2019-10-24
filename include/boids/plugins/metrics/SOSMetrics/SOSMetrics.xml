@@ -4,6 +4,9 @@
   <library>SOSMetrics_plugin</library>
 
   <!-- weights for scoring function -->
-  <ground_collisions>-1.0</ground_collisions>
-  <killed>-1.0</killed>
+  <flight_time_w>0.0</flight_time_w>
+  <team_collisions_w>-1.0</team_collisions_w>
+  <non_team_collisions_w>-1.0</non_team_collisions_w>
+  <ground_collisions_w>-1.0</ground_collisions_w>
+  <killed_w>-1.0</killed_w>
 </params>
