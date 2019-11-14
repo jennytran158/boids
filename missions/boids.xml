@@ -47,7 +47,7 @@
     <entity>
       <team_id>1</team_id>
       <color>77 77 255</color>
-      <count>5</count>
+      <count>3</count>
       <health>1</health>
       <radius>2</radius>
       <variance_x>20</variance_x>
@@ -60,7 +60,7 @@
       <controller>SimpleQuadrotorControllerLQR</controller>
       <motion_model>SimpleQuadrotor</motion_model>
       <visual_model>iris</visual_model>
-      <autonomy>Attackers</autonomy>
+      <autonomy>Charmer</autonomy>
       <base>
         <latitude>35.721112</latitude>
         <longitude>-120.770305</longitude>
@@ -71,7 +71,7 @@
     <entity>
       <team_id>1</team_id>
       <color>77 77 255</color>
-      <count>2</count>
+      <count>3</count>
       <health>1</health>
       <radius>2</radius>
       <variance_x>40</variance_x>
@@ -84,7 +84,7 @@
       <controller>SimpleQuadrotorControllerLQR</controller>
       <motion_model>SimpleQuadrotor</motion_model>
       <visual_model>iris</visual_model>
-      <autonomy>Attackers</autonomy>
+      <autonomy>Charmer</autonomy>
       <base>
         <latitude>35.721112</latitude>
         <longitude>-120.770305</longitude>
@@ -95,7 +95,7 @@
     <entity>
       <team_id>1</team_id>
       <color>77 77 255</color>
-      <count>2</count>
+      <count>1</count>
       <health>1</health>
       <radius>2</radius>
       <variance_x>40</variance_x>
@@ -108,7 +108,7 @@
       <controller>SimpleQuadrotorControllerLQR</controller>
       <motion_model>SimpleQuadrotor</motion_model>
       <visual_model>iris</visual_model>
-      <autonomy>Attackers</autonomy>
+      <autonomy>Infiltrator</autonomy>
       <base>
         <latitude>35.721112</latitude>
         <longitude>-120.770305</longitude>
@@ -116,34 +116,11 @@
         <radius>25</radius>
       </base>
     </entity>
+
     <entity>
       <team_id>1</team_id>
       <color>77 77 255</color>
-      <count>5</count>
-      <health>1</health>
-      <radius>2</radius>
-      <variance_x>40</variance_x>
-      <variance_y>40</variance_y>
-      <variance_z>40</variance_z>
-      <x>-200</x>
-      <y>-200</y>
-      <z>100</z>
-      <heading>50</heading>
-      <controller>SimpleQuadrotorControllerLQR</controller>
-      <motion_model>SimpleQuadrotor</motion_model>
-      <visual_model>iris</visual_model>
-      <autonomy>Attackers</autonomy>
-      <base>
-        <latitude>35.721112</latitude>
-        <longitude>-120.770305</longitude>
-        <altitude>300</altitude>
-        <radius>25</radius>
-      </base>
-    </entity>
-    <entity>
-      <team_id>1</team_id>
-      <color>77 77 255</color>
-      <count>5</count>
+      <count>3</count>
       <health>1</health>
       <radius>2</radius>
       <variance_x>40</variance_x>
@@ -156,7 +133,7 @@
       <controller>SimpleQuadrotorControllerLQR</controller>
       <motion_model>SimpleQuadrotor</motion_model>
       <visual_model>iris</visual_model>
-      <autonomy>Attackers</autonomy>
+      <autonomy>Charmer</autonomy>
       <base>
         <latitude>35.721112</latitude>
         <longitude>-120.770305</longitude>
@@ -181,7 +158,7 @@
       <controller>SimpleQuadrotorControllerLQR</controller>
       <motion_model>SimpleQuadrotor</motion_model>
       <visual_model>iris</visual_model>
-      <autonomy>Attackers</autonomy>
+      <autonomy>Charmer</autonomy>
       <base>
         <latitude>35.721112</latitude>
         <longitude>-120.770305</longitude>
@@ -193,7 +170,7 @@
     <entity>
       <team_id>2</team_id>
       <color>255 0 0</color>
-      <count>20</count>
+      <count>10</count>
       <health>1</health>
       <radius>2</radius>
       <x>0</x>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://gtri.gatech.edu"?>
+<params>
+  <library>Charmer_plugin</library>
+  <initial_speed>24.3</initial_speed>
+  <sense_range>45</sense_range>
+  <attack_sense_range>30</attack_sense_range>
+
+  <goal_weight>2</goal_weight>
+  <avoid_nonteam_weight>3</avoid_nonteam_weight>
+</params>

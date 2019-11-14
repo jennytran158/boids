@@ -207,7 +207,7 @@ int id = follow_id_;
         attack_time_ = 0;
         attack_end_time_ = 0;
         //broadcast attacked ids
-        auto msg = std::make_shared<sc::Message<int>>();
+        auto msg = std::make_shared<sc::Message<int>>(); //HERE
         msg->data = follow_id_;
         killed_ids_ad->publish(msg);
       }
