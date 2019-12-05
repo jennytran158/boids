@@ -347,9 +347,6 @@ REGISTER_PLUGIN(scrimmage::Autonomy,
     } else {
       update_desired_state(v_goal);
     }
-    if (goal_ != Eigen::Vector3d(0,0,100)) {
-      check_attack(t, dt);
-    }
     return true;
   }
 } // namespace autonomy
