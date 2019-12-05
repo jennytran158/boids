@@ -44,6 +44,7 @@
 #include <list>
 #include <string>
 
+
 namespace scrimmage {
 namespace interaction {
 
@@ -62,4 +63,7 @@ class Base : public scrimmage::EntityInteraction {
 };
 } // namespace interaction
 } // namespace scrimmage
+
+scrimmage::PublisherPtr pub_boundary_;
+int base_attacked = 0;
 #endif // INCLUDE_BOIDS_PLUGINS_INTERACTION_BASE_BASE_H_

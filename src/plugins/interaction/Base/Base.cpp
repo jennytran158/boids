@@ -36,6 +36,9 @@
 #include <scrimmage/entity/Entity.h>
 #include <scrimmage/plugin_manager/RegisterPlugin.h>
 #include <scrimmage/math/State.h>
+#include <scrimmage/pubsub/Publisher.h>
+#include <scrimmage/pubsub/Subscriber.h>
+
 
 #include <memory>
 #include <limits>
@@ -58,7 +61,7 @@ REGISTER_PLUGIN(scrimmage::EntityInteraction,
 
       bool Base::init(std::map<std::string, std::string> &mission_params,
         std::map<std::string, std::string> &plugin_params) {
-
+	  pub_boundary_ = advertise("GlobalNetwork", "Attacked");
           return true;
         }
 
@@ -109,6 +112,14 @@ REGISTER_PLUGIN(scrimmage::EntityInteraction,
                   red_base_->mutable_cuboid()->set_z_length(base_depth);
                   sc::set(red_base_->mutable_cuboid()->mutable_center(), 0, 0, base_depth/2);
                   draw_shape(red_base_);
+
+		  //Send message that base is now red
+		  base_attacked = 1;
+
+
+		  auto msg = std::make_shared<sc::Message<int>>();
+		  msg->data = base_attacked;
+		  pub_boundary_->publish(msg);
                 }
               }
             }
