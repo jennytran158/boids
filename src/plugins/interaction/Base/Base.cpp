@@ -113,7 +113,6 @@ REGISTER_PLUGIN(scrimmage::EntityInteraction,
               }
             }
             return true;
-            return true;
           }
         } // namespace interaction
       } // namespace scrimmage

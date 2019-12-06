@@ -74,6 +74,7 @@ REGISTER_PLUGIN(scrimmage::EntityInteraction,
                 auto ptr = std::find(killed_ids_.begin(),killed_ids_.end(), id);
                 if (*ptr == id) {
                   ent1->set_health_points(-1e9);
+                  ent1->set_active(false);
                 }
               }
             }

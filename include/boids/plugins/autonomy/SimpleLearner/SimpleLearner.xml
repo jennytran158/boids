@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://gtri.gatech.edu"?>
+<params>
+  <library>SimpleLearner_plugin</library>
+  <radius>2</radius>
+  <module>test_openai</module>
+  <actor_init_func>actor_init_func</actor_init_func>
+</params>

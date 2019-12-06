@@ -206,6 +206,9 @@ int id = follow_id_;
       if (attack_time_ >= attack_end_time_){
         attack_time_ = 0;
         attack_end_time_ = 0;
+        // ent.set_active(false);
+        // printf("-----id: %d, active: ------\n", ent.id().id());
+        // printf(ent.active() ? "true" : "false");
         //broadcast attacked ids
         auto msg = std::make_shared<sc::Message<int>>();
         msg->data = follow_id_;

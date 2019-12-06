@@ -96,6 +96,7 @@ REGISTER_PLUGIN(scrimmage::Autonomy,
             attack_end_time_ = 0;
             follow_id_ = -1;
           }
+          printf("%f", attack_time_);
         };
         subscribe<int>("GlobalNetwork", "Killed_IDs", killed_callback);
         max_speed_ = get<double>("max_speed", params, 21);
@@ -346,9 +347,6 @@ REGISTER_PLUGIN(scrimmage::Autonomy,
         draw_shape(line);
     } else {
       update_desired_state(v_goal);
-    }
-    if (goal_ != Eigen::Vector3d(0,0,100)) {
-      check_attack(t, dt);
     }
     return true;
   }
