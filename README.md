@@ -3,7 +3,7 @@
 A simulation in Scrimmage of a battle between two swarms of drones, each with different objectives and setup.
 ## Video Demo
 https://youtu.be/g0th54Eyt7c
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g0th54Eyt7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 * Note
 	* Red Team (defenders) vs Blue Team (attackers)
 	* Each yellow line is the velocity vector of an individual drone.
