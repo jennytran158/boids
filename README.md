@@ -1,8 +1,8 @@
 # Boids
 ## Introduction
 A simulation in Scrimmage of a battle between two swarms of drones, each with different objectives and setup.
-## Video Demo
-https://youtu.be/g0th54Eyt7c
+## Video the Simualtion
+https://youtu.be/mSubQIXbDUY
 
 [![Alt text](https://img.youtube.com/vi/g0th54Eyt7c/0.jpg)](https://www.youtube.com/watch?v=g0th54Eyt7c)
 
