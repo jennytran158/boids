@@ -103,7 +103,6 @@ void MyMetric::calc_team_scores() {
         team_metrics_[team_id]["attackers_killed"] = score.attackers_killed();
         team_scores_[team_id] = score.score();
     }
-
     // list the headers we want put in the csv file
     headers_.push_back("base_attacked");
 }
@@ -111,7 +110,6 @@ void MyMetric::calc_team_scores() {
 void MyMetric::print_team_summaries() {
     for (std::map<int, Score>::iterator it = team_coll_scores_.begin();
          it != team_coll_scores_.end(); ++it) {
-
         cout << "Score: " << it->second.score() << endl;
         cout << "Base Attacks: " << it->second.base_attacked() << endl;
         cout << "Attackers Killed: " << it->second.attackers_killed() << endl;

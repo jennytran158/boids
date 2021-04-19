@@ -31,7 +31,6 @@ set(PROJECT_SOVERSION "00")
 if(NOT CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX /usr/local)
 endif()
-
 # fetch all the local directories for generated code
 get_filename_component(PROJECT_LIB_DIR ${PROJECT_BINARY_DIR}/lib ABSOLUTE)
 get_filename_component(PROJECT_PLUGIN_LIBS_DIR ${PROJECT_BINARY_DIR}/plugin_libs ABSOLUTE)
@@ -67,7 +66,6 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_LIB_DIR} CACHE PATH
 
 set(MSGS_INCLUDE_DIR ${PROJECT_BINARY_DIR}/msgs)
 set(PROTO_INCLUDE_DIR ${PROJECT_BINARY_DIR}/src/proto)
-
 ###############################################################################
 # Find Scrimmage
 ###############################################################################
@@ -194,7 +192,6 @@ if(UNIX AND NOT APPLE)
   # Add all library targets to the build-tree export set
   export(TARGETS ${PROJECT_LIBS} ${PROJECT_PLUGINS}
     FILE "${PROJECT_BINARY_DIR}/${PROJECT_NAME}-targets.cmake")
-
   # Export the package for use from the build-tree
   # (this registers the build-tree with a global CMake-registry ~/.cmake)
   export(PACKAGE ${PROJECT_NAME})

@@ -30,30 +30,40 @@
  *
  */
 
-#ifndef INCLUDE_BOIDS_PLUGINS_AUTONOMY_DEFENDERS_DEFENDERS_H_
-#define INCLUDE_BOIDS_PLUGINS_AUTONOMY_DEFENDERS_DEFENDERS_H_
-#include <boids/plugins/autonomy/MBoid/MBoid.h>
-
+#ifndef INCLUDE_SCRIMMAGE_PLUGINS_AUTONOMY_MBOID_MBOID_H_
+#define INCLUDE_SCRIMMAGE_PLUGINS_AUTONOMY_MBOID_MBOID_H_
+#include <scrimmage/autonomy/Autonomy.h>
+#include <string>
+#include <map>
+#include <vector>
 
 namespace scrimmage {
 namespace autonomy {
-class Defenders : public MBoid {
+class MBoid: public scrimmage::Autonomy {
   public:
     virtual void init(std::map<std::string, std::string> &params) override;
     virtual bool step_autonomy(double t, double dt) override;
-  protected:
-    virtual Eigen::Vector3d step_goal() override;
-    virtual void get_neighbors_in_range(double range,std::vector<ID> &neighbors) override;
-    void show_attack_FOV();
-    void step_attack(double t, double dt);
-    int follow_id_ = -1;
-    double attack_sense_range_ = 30;
-    double attack_duration_ = 3;
-    double attack_time_ = 0;
-    double attack_end_time_ = 0;
-    bool attacking_ = false;
-    scrimmage::PublisherPtr killed_ids_ad;
+ protected:
+   void show_FOV(double sense_range,double fov_width_angle, double fov_height_angle);
+   virtual void get_neighbors_in_range(double range,std::vector<ID> &neighbors);
+   virtual Eigen::Vector3d step_goal() = 0;
+   void update_desired_state(Eigen::Vector3d &v);
+   double initial_speed_ = 0;
+   double max_speed_;
+   double sense_range_;
+   double fov_width_angle_;
+   double fov_height_angle_;
+   //weights
+    double w_align_;
+    double w_avoid_team_;
+    double w_centroid_;
+    double w_avoid_nonteam_;
+    double w_goal_;
+    double minimum_team_range_;
+    double minimum_nonteam_range_;
+    double sphere_of_influence_;
+    Eigen::Vector3d goal_;
 };
 } // namespace autonomy
 } // namespace scrimmage
-#endif // INCLUDE_BOIDS_PLUGINS_AUTONOMY_DEFENDERS_DEFENDERS_H_
+#endif // INCLUDE_SCRIMMAGE_PLUGINS_AUTONOMY_MBOID_MBOID_H_

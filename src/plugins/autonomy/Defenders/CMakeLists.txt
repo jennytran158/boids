@@ -18,6 +18,7 @@ target_compile_options(${LIBRARY_NAME}
 
 target_link_libraries(${LIBRARY_NAME}
   scrimmage-core
+  Mboid_plugin
 )
 
 set(_soversion ${LIB_MAJOR}.${LIB_MINOR}.${LIB_RELEASE})
@@ -27,13 +28,13 @@ set_target_properties(${LIBRARY_NAME} PROPERTIES
   VERSION ${_soversion}
   LIBRARY_OUTPUT_DIRECTORY ${PROJECT_PLUGIN_LIBS_DIR}
 )
-
+#message(${PROJECT_INC_DIR})
 target_include_directories(${LIBRARY_NAME}
   PUBLIC
     $<INSTALL_INTERFACE:include>
     $<BUILD_INTERFACE:${PROJECT_INC_DIR}>
 )
-
+#add_dependencies(${LIBRARY_NAME} Mboid_plugin)
 install(TARGETS ${LIBRARY_NAME}
   # IMPORTANT: Add the library to the "export-set"
   EXPORT ${PROJECT_NAME}-targets
