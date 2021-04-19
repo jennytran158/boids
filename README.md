@@ -1,8 +1,12 @@
-# Boids
+# Combat Simulation with Boids
+
 ## Introduction
 A simulation in Scrimmage of a battle between two swarms of drones, each with different objectives and setup.
 ## Watch the Simualtion
 https://youtu.be/mSubQIXbDUY
+
+## Simulation Overview
+![picture alt](https://github.com/jennytran158/boids/blob/master/images/boids.png "Plugins used in the project")
 
 [![Alt text](https://img.youtube.com/vi/g0th54Eyt7c/0.jpg)](https://www.youtube.com/watch?v=g0th54Eyt7c)
 
